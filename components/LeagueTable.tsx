@@ -41,7 +41,7 @@ export default function LeagueTable({ onLeagueNameChange, onUpdatedAtChange }: L
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/table');
+      const response = await fetch('https://floorball-league.vercel.app/api/table');
       const jsonData = await response.json();
       setData(jsonData);
       onLeagueNameChange?.(jsonData.LeagueName);
